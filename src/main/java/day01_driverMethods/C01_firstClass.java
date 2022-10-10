@@ -35,6 +35,6 @@ public class C01_firstClass {
              NOT : 9.satirdaki 2.parametre windows ve mac icin farklidir
 
          */
-        System.out.println("calıştı");
+
     }
 }
