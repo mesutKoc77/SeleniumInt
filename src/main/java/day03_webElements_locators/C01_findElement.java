@@ -19,12 +19,14 @@ public class C01_findElement {
 
         //bir web sitesinde bir elmeneti kullanbilmke için o web elementi kodlarımıza tanıtmalıyız.
 
-        WebElement amazonAramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement amazonAramaKutusu=driver.findElement(By.name("field-keywords"));
+        //WebElement amazonAramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
         amazonAramaKutusu.sendKeys("Nutella"+ Keys.ENTER);
 
         Thread.sleep(5000);
 
         driver.close();
+
 
         /*
         Selen ium da 8 adet locater vardır.
@@ -46,6 +48,27 @@ public class C01_findElement {
 
        Bu listedeki elemntler WebElmentler oldugu için direkt yazılamaz.
        for each loop kullanılarak webeleemnt ozellikleri yazdırılabailir.
+
+       3- name
+       name attribute, eger html de name attribute u varsa kullanılabilir.
+
+       4-tagname
+       tagname de class gibi benzer ozellikte olanları gruplandırdırgıdan bir element degil
+       birden çok elemente ulaşılabilir.
+
+       5- LinkText
+       linktext sadece linkler için kullanılır ve her link html elemnet inin uzerinde bir link yazısı olur
+       bu yazı geneldekullanıcının front end de gordugu yazı ile aynıdır. bazen space gibi farkedilmeyecek
+       eklemeler olabilir. locate ederken linktext kullanılırsa link yazısının tamamı kullanılmakıdır.
+       varsa boşluk vb locate alınırken yazılmalıdır.
+
+       6-PartiallinkText
+
+       linktext gibi sadece linkler için kullanılır
+       linktext ten farkkı ise tum yazı degil de yazının parçası da kullanılabilir.
+
+
+
          */
 
 
