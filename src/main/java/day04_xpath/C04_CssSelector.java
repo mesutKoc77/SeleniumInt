@@ -5,7 +5,7 @@ public class C04_CssSelector {
         /*
         CssSelector 8. locater dır ve x path e cok benzer.
         xpath=//tagName[@attributeName='attributeValue']
-        cssSelcetor=tagName[attributeName='attributeValue']
+        cssSelcetor=tagName[attributeName="attributeValue"]
 
         xpath daha guclu
         xpath ile yazılan locater lar html kodldarında aratabiliyourz.
