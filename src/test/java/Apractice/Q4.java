@@ -12,7 +12,6 @@ public class Q4 {
 
     /*
     Navigate to  https://testpages.herokuapp.com/styled/index.html
-
     Click on  Calculater under Micro Apps
     Type any number in the first input
     Type any number in the second input
@@ -42,7 +41,6 @@ public class Q4 {
         System.out.println("yeni: "+yeni);
         driver.close();
         driver.quit();
-
 
     }
 }
