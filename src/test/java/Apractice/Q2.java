@@ -71,6 +71,7 @@ public class Q2 {
         driver.navigate().refresh();
         driver.navigate().forward();
 
+        driver.close();
         driver.quit();
 
 
