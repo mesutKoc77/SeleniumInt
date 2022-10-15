@@ -57,6 +57,8 @@ public class Q2 {
         System.out.println(" titleofQuarter : "+titleofQuarter);
         System.out.println("urlOfQuarter : "+urlOfQuarter);
 
+        System.out.println(titleofQuarter.contains("Quarter") ? "title Quarter içeriyor PAssed" : "title Quarte içermiyor Failde");
+        System.out.println(urlOfQuarter.contains("quarter") ? "urlsi Quarter içeriyor PAssed" : "urlsi Quarter içermiyor Failed ");
         if (titleofQuarter.contains("Quarter")){
             System.out.println("title Quarter içeriyor PAssed ");
         } else {
@@ -67,6 +69,13 @@ public class Q2 {
         }else {
             System.out.println("urlsi Quarter içermiyor Failed");
         }
+        boolean istrue=driver.getCurrentUrl().contains("com");
+        if (istrue){
+            System.out.println("com testi Passed");
+        }else {
+            System.out.println("com testi Failed");
+        }
+
         driver.navigate().back();
         driver.navigate().refresh();
         driver.navigate().forward();
