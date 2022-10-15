@@ -1,6 +1,7 @@
 package Apractice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +22,7 @@ public class Q3 {
     choose your command  -> Browser Commands
     click submit button
  */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver","src/resources/chromedriver.exe");
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
@@ -36,17 +37,29 @@ public class Q3 {
 
         driver.findElement(By.xpath("//input[@name=\"lastname\"]")).sendKeys("KOC");
 
-        driver.findElement(By.id("sex-0")).click();
-        driver.findElement(By.id("exp-0")).click();
-        driver.findElement(By.id("datepicker")).sendKeys("15.10.2022");
-        driver.findElement(By.id("profession-1")).click();
-        driver.findElement(By.id("tool-2")).click();
-        driver.findElement(By.xpath("//select[@id=\"continents\"]")).click();
-        driver.findElement(By.xpath("//option[text()=\"Europe\"]"));
+        WebElement radioButtonMan=driver.findElement(By.id("sex-0"));
+        radioButtonMan.click();
 
-        driver.findElement(By.id("//option[text()=\"Browser Commands\"]")).click();
-        driver.findElement(By.className("btn btn-info"));
+        radioButtonMan.sendKeys(Keys.PAGE_DOWN);
+
+        driver.findElement(By.id("exp-0")).click();
+
+        driver.findElement(By.id("datepicker")).sendKeys("15.10.2022");
+
+        driver.findElement(By.id("profession-1")).click();
+
+        driver.findElement(By.id("tool-2")).click();
+
+       WebElement europe =driver.findElement(By.xpath("//select[@id=\"continents\"]"));
+       europe.sendKeys("Europe"+Keys.ENTER);
+
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//select[@id='selenium_commands']")).sendKeys("Wait Commands"+Keys.ENTER);
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//button[@class=\"btn btn-info\"]")).click();
+        Thread.sleep(1000);
         driver.close();
+        driver.quit();
 
 
     }
